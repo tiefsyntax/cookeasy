@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CookEasy</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="cookeasyfavicon.svg"/>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav container" aria-label="主選單">
+        <div class="nav-left">
+          <h1 class="logo">CookEasy</h1>
+        </div>
+        <button class="menu-toggle" aria-label="開啟選單">☰</button>
+        <div class="nav-right">
+          <ul class="nav-list">
+            <li><a href="#" class="nav-link">首頁</a></li>
+            <li><a href="#" class="nav-link">食譜分類</a></li>
+            <li><a href="#" class="nav-link">今日推薦</a></li>
+            <li><a href="#" class="nav-link">我的收藏</a></li>
+            <li><a href="#" class="nav-link">登入 / 註冊</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2 class="hero-title">今天想煮什麼？</h2>
+          <p class="hero-subtitle">從冰箱食材找到最適合你的料理</p>
+          <form class="hero-search" id="searchForm">
+            <input
+              id="searchInput"
+              type="search"
+              name="ingredient"
+              class="search-input"
+              required
+              placeholder="輸入食材（例如：雞肉、番茄）"
+            />
+            <button type="submit" class="btn search-btn" data-action="search">
+              開始搜尋
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Category -->
+    <section class="category">
+      <div class="container">
+        <h2 class="section-title">料理分類</h2>
+        <ul class="category-list">
+          <li class="category-item">
+            <a href="#" class="category-link">家常料理</a>
+          </li>
+          <li class="category-item">
+            <a href="#" class="category-link">快手料理（10 分鐘）</a>
+          </li>
+          <li class="category-item">
+            <a href="#" class="category-link">健康低脂</a>
+          </li>
+          <li class="category-item">
+            <a href="#" class="category-link">甜點</a>
+          </li>
+          <li class="category-item">
+            <a href="#" class="category-link">異國料理</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Feature -->
+
+    <section class="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title" class="section-title">今日推薦</h2>
+        <div class="card-list">
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="imges/cookeasyfood01.png" alt="香煎雞腿排" class="card-img" />
+            </div>
+            <h3 class="card-title">香煎雞腿排</h3>
+            <p class="card-desc">外酥內嫩，簡單 15 分鐘完成</p>
+            <p class="card-time">15 分鐘</p>
+            <button class="btn card-btn" data-action="view">查看食譜</button>
+          </article>
+          <article class="card">
+            <div class="card-img-wrap">
+              <img
+                src="imges/cookeasyfood02.png"
+                alt="清炒蒜香西蘭花"
+                class="card-img"
+              />
+            </div>
+            <h3 class="card-title">清炒蒜香花椰菜</h3>
+            <p class="card-desc">脆嫩爽口，健康快手 5 分鐘完成</p>
+            <p class="card-time">5 分鐘</p>
+            <button class="btn card-btn" data-action="view">查看食譜</button>
+          </article>
+          <article class="card">
+            <div class="card-img-wrap">
+              <img
+                src="imges/cookeasyfood03.png"
+                alt="奶油蒜香嫩煎干貝"
+                class="card-img"
+              />
+            </div>
+            <h3 class="card-title">奶油蒜香嫩煎干貝</h3>
+            <p class="card-desc">鮮甜多汁，五星級美味 10 分鐘完成</p>
+            <p class="card-time">10 分鐘</p>
+            <button class="btn card-btn" data-action="view">查看食譜</button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Recipe -->
+    <section class="recipe">
+      <div class="container">
+        <h2 class="section-title">熱門食譜</h2>
+
+        <div class="recipe-list" id="recipeList">
+          <article class="recipe-item">
+            <h3 class="recipe-title">番茄炒蛋</h3>
+            <p class="recipe-desc">經典家常菜，新手也能成功</p>
+            <p class="recipe-ingredients">番茄、雞蛋、鹽</p>
+            <div class="recipe-actions">
+              <button type="button" class="btn" data-action="view">查看</button>
+              <button type="button" class="btn btn-fav" data-action="fav">
+                加入收藏
+              </button>
+            </div>
+          </article>
+          <article class="recipe-item">
+            <h3 class="recipe-title">清蒸檸檬魚</h3>
+            <p class="recipe-desc">異國風味，酸辣開胃又鮮美</p>
+            <p class="recipe-ingredients">鮮魚、檸檬、辣椒</p>
+            <div class="recipe-actions">
+              <button type="button" class="btn" data-action="view">查看</button>
+              <button type="button" class="btn btn-fav" data-action="fav">
+                加入收藏
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Cart -->
+    <section class="cart">
+      <div class="container">
+        <h2 class="section-title">缺少食材？</h2>
+        <p class="cart-text">一鍵加入購物清單，輕鬆備料</p>
+        <button class="btn cart-btn">加入購物車</button>
+      </div>
+    </section>
+    <!-- Subscribe -->
+    <section class="subscribe">
+      <div class="container">
+        <h2 class="section-title">取得最新食譜</h2>
+
+        <form class="subscribe-box" id="subscribeForm">
+          <input
+            id="subscribeInput"
+            type="email"
+            name="email"
+            class="subscribe-input"
+            required
+            placeholder="輸入你的 Email"
+          />
+          <button
+            type="submit"
+            class="btn subscribe-btn"
+            data-action="subscribe"
+          >
+            訂閱
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer-list">
+          <li><a href="#" class="footer-link">關於我們</a></li>
+          <li><a href="#" class="footer-link">聯絡我們</a></li>
+          <li><a href="#" class="footer-link">隱私政策</a></li>
+        </ul>
+        <p class="footer-copy">© 2026 CookEasy</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
